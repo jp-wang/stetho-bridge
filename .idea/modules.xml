@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stetho-bridge.iml" filepath="$PROJECT_DIR$/stetho-bridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stetho-bridge-android/stetho-bridge-android.iml" filepath="$PROJECT_DIR$/stetho-bridge-android/stetho-bridge-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stetho-bridge-android-no-op/stetho-bridge-android-no-op.iml" filepath="$PROJECT_DIR$/stetho-bridge-android-no-op/stetho-bridge-android-no-op.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stetho-bridge-interface/stetho-bridge-interface.iml" filepath="$PROJECT_DIR$/stetho-bridge-interface/stetho-bridge-interface.iml" />
+    </modules>
+  </component>
+</project>
