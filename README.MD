@@ -11,7 +11,7 @@ It gives you a simple way to enable and disable Stetho between `debug` and `rele
 ```gradle
   // Gradle dependency on Stetho 
   dependencies { 
-    compile 'io.jp.stetho:stetho-bridge:1.0.0' 
+    compile 'io.jp.stetho:stetho-bridge:1.0.3' 
   } 
 ```
 
@@ -19,7 +19,7 @@ It gives you a simple way to enable and disable Stetho between `debug` and `rele
   <dependency>
     <groupid>io.jp.stetho</groupid> 
     <artifactid>stetho-bridge</artifactid> 
-    <version>1.0.0</version> 
+    <version>1.0.3</version> 
   </dependency> 
 ```
 
