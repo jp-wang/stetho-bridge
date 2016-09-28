@@ -46,18 +46,15 @@ public class StethoBridge {
 
     static class StethoURLConnectionAdapter implements StethoURLConnection {
         private StethoURLConnectionManager stethoURLConnectionManager = new StethoURLConnectionManager("stetho");
+
         @Override
         public void preConnect(HttpURLConnection urlConnection, byte[] request) {
-            stethoURLConnectionManager.preConnect(urlConnection, new ByteArrayRequestEntity(request));
+            stethoURLConnectionManager.preConnect(urlConnection, request != null ? new ByteArrayRequestEntity(request) : null);
         }
 
         @Override
-        public void postConnect(HttpURLConnection urlConnection) {
-            try {
-                stethoURLConnectionManager.postConnect();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        public void postConnect(HttpURLConnection urlConnection) throws IOException {
+            stethoURLConnectionManager.postConnect();
         }
 
         @Override

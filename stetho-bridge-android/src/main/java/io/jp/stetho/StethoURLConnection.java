@@ -19,42 +19,24 @@
  */
 package io.jp.stetho;
 
-import android.content.Context;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 
 /**
  * @author jpwang
- * @since 9/15/16
+ * @since 09/15/2016
  *
  * Source code - https://github.com/jp-wang/
+ *
+ * The interface of connection
  */
-public class StethoBridge {
-    public static void initialize(Context context) {
-    }
+public interface StethoURLConnection {
+    void preConnect(HttpURLConnection urlConnection, byte[] request);
 
-    public static StethoURLConnection newStethoURLConnection() {
-        return new EmptyStethoURLConnection();
-    }
+    void postConnect(HttpURLConnection urlConnection) throws IOException;
 
-    static class EmptyStethoURLConnection implements StethoURLConnection {
-        @Override
-        public void preConnect(HttpURLConnection urlConnection, byte[] request) {
-        }
+    void postFailed(IOException e);
 
-        @Override
-        public void postConnect(HttpURLConnection urlConnection) throws IOException {
-        }
-
-        @Override
-        public void postFailed(IOException e) {
-        }
-
-        @Override
-        public InputStream interpretResponseStream(InputStream inputStream) {
-            return inputStream;
-        }
-    }
+    InputStream interpretResponseStream(InputStream inputStream);
 }

@@ -32,7 +32,7 @@ import java.net.HttpURLConnection;
 public interface StethoURLConnection {
     void preConnect(HttpURLConnection urlConnection, byte[] request);
 
-    void postConnect(HttpURLConnection urlConnection);
+    void postConnect(HttpURLConnection urlConnection) throws IOException;
 
     void postFailed(IOException e);
 

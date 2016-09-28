@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.0'
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -22,17 +22,16 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.0'
+
     //Stetho
     compile 'com.facebook.stetho:stetho:1.4.1'
     compile 'com.facebook.stetho:stetho-urlconnection:1.4.1'
-    compile project(':stetho-bridge-interface')
 }
 
-publish {
-    groupId = 'io.jp.stetho'
-    artifactId = rootProject.name
-    version = '1.0.0'
-    description = 'Stetho-bridge is an simple android library to setup a bridge for any project who wants to use Stetho.'
-    website = "https://github.com/neiyo1987/${rootProject.name}"
-}
+//publish {
+//    groupId = 'io.jp.stetho'
+//    artifactId = 'stetho-bridge-android'
+//    version = '1.0.4'
+//    description = 'Stetho-bridge is an simple android library to setup a bridge for any project who wants to use Stetho.'
+//    website = "https://github.com/neiyo1987/${rootProject.name}"
+//}
