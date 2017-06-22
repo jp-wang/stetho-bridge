@@ -1,4 +1,4 @@
-#  Stetho Bridge
+# Stetho Bridge
 
 ### Introduction
 
